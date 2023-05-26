@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [macos-latest, ubuntu-20.04, windows-latest]
+        platform: [ubuntu-20.04]
     runs-on: ${{ matrix.platform }}
 
     steps:
@@ -50,8 +50,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: v__VERSION__ # This only works if your workflow triggers on new tags.
-          releaseName: v__VERSION__ # tauri-action replaces \_\_VERSION\_\_ with the app version.
+          tagName: v__VERSION__-linux # This only works if your workflow triggers on new tags.
+          releaseName: v__VERSION__-linux # tauri-action replaces \_\_VERSION\_\_ with the app version.
           # releaseBody: 'See the assets to download and install this version.'
           # releaseDraft: true
           # prerelease: false
