@@ -88,11 +88,10 @@
         "signingIdentity": null
       },
       "resources": [
-        "jre",
         "dbs"
       ],
       "shortDescription": "",
-      "targets": "all",
+      "targets": "appimage",
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
