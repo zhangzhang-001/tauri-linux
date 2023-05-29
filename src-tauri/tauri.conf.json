@@ -93,7 +93,12 @@
         "jre"
       ],
       "shortDescription": "",
-      "targets": "appimage",
+      "targets": [
+        "deb",
+        "msi",
+        "dmg",
+        "app"
+      ],
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
