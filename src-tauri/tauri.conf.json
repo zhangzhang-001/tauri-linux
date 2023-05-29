@@ -89,7 +89,8 @@
       },
       "resources": [
         "dbs",
-        "jar"
+        "jar",
+        "jre"
       ],
       "shortDescription": "",
       "targets": [
