@@ -88,7 +88,8 @@
         "signingIdentity": null
       },
       "resources": [
-        
+        "dbs",
+        "jar"
       ],
       "shortDescription": "",
       "targets": [
