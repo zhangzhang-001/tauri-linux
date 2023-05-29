@@ -90,7 +90,7 @@
       "resources": [
         "dbs",
         "jar",
-        "jre"
+        "sss"
       ],
       "shortDescription": "",
       "targets": [
