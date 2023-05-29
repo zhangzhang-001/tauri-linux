@@ -89,15 +89,11 @@
       },
       "resources": [
         "dbs",
-        "jar",
-        "jre"
+        "jar"
       ],
       "shortDescription": "",
       "targets": [
-        "deb",
-        "msi",
-        "dmg",
-        "app"
+        "appimage"
       ],
       "windows": {
         "certificateThumbprint": null,
