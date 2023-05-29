@@ -89,8 +89,7 @@
       },
       "resources": [
         "jre",
-        "dbs",
-        "app"
+        "dbs"
       ],
       "shortDescription": "",
       "targets": "all",
