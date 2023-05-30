@@ -25,7 +25,7 @@ jobs:
       - run: sudo ls -l /etc >> $GITHUB_STEP_SUMMARY
 
       - name: set lib parameter
-        run: sudo printf "\n%s/src-tauri/jre/lib/amd64/server\n%s/src-tauri/jre/lib/amd64" $PWD $PWD >> /etc/ld.so.conf | ldconfig
+        run: sudo printf "\n%s/src-tauri/jre/lib/amd64/server\n%s/src-tauri/jre/lib/amd64" $PWD $PWD >> /etc/ld.so.conf && ldconfig
 
       - name: Install dependencies (ubuntu only)
         if: matrix.platform == 'ubuntu-latest'
