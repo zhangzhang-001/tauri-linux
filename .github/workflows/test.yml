@@ -6,7 +6,6 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "test=hello"
-      - run: echo "::debug::Set the Octocat variablexxx"
-      - run: echo "::workflow-command parameter1={data},parameter2={data}::{command value}"
-      - run: echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: |
+        pwd -L
+        echo $PWD >> $GITHUB_STEP_SUMMARY
