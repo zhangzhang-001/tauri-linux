@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "test=hello"
-      - run: echo "::debug::Set the Octocat variable"
+      - run: echo "::debug::Set the Octocat variablexxx"
       - run: echo "::workflow-command parameter1={data},parameter2={data}::{command value}"
