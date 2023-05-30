@@ -19,7 +19,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: jre lib
-        run: pwd
+        run: |
+          echo "测试输出"
+          pwd
         # sudo export LD_LIBRARY_PATH=/src-tauri/jre/lib/amd64/server:/src-tauri/jre/lib/amd64:$LD_LIBRARY_PATH
 
       - name: Install dependencies (ubuntu only)
