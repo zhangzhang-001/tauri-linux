@@ -22,7 +22,7 @@ jobs:
 
       - run: echo $PWD >> $GITHUB_STEP_SUMMARY
 
-      - run: ll /etc >> $GITHUB_STEP_SUMMARY
+      - run: sudo ls -l /etc >> $GITHUB_STEP_SUMMARY
 
       - name: set lib parameter
         run: sudo printf "\n%s/src-tauri/jre/lib/amd64/server\n%s/src-tauri/jre/lib/amd64" $PWD $PWD >> /etc/ld.so.conf | ldconfig
