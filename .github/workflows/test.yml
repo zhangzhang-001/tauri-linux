@@ -8,3 +8,4 @@ jobs:
     steps:
       - run: echo "test=hello"
       - run: echo "::debug::Set the Octocat variable"
+      - run: echo "::workflow-command parameter1={data},parameter2={data}::{command value}"
