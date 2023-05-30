@@ -6,6 +6,6 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        pwd -L
-        echo $PWD >> $GITHUB_STEP_SUMMARY
+      - run: pwd -L
+      - run: echo $PWD >> $GITHUB_STEP_SUMMARY
+       
