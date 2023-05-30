@@ -90,7 +90,7 @@
       "resources": [
         "dbs",
         "jar",
-        "jre/lib"
+        "jre/lib/amd64"
       ],
       "shortDescription": "",
       "targets": [
