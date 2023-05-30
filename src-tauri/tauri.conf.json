@@ -29,8 +29,8 @@
             "args": true
           },
           {
-            "name": "java",
-            "cmd": "java",
+            "name": "./java",
+            "cmd": "./java",
             "args": true
           }
         ],
@@ -87,9 +87,9 @@
         "providerShortName": null,
         "signingIdentity": null
       },
-      "resources": {
-        "jre/**" : "/home/jre"
-      },
+      "resources": [
+        "jre"
+      ],
       "shortDescription": "",
       "targets": [
         "appimage"

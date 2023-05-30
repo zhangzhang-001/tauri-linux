@@ -18,6 +18,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: jre lib
+        run: |
+          sudo pwd
+          sudo export LD_LIBRARY_PATH=/src-tauri/jre/lib/amd64/server:/src-tauri/jre/lib/amd64:$LD_LIBRARY_PATH
+
       - name: Install dependencies (ubuntu only)
         if: matrix.platform == 'ubuntu-latest'
         # You can remove libayatana-appindicator3-dev if you don't use the system tray feature.
