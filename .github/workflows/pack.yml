@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: set lib parameter
-        run: printf "\n%s/src-tauri/jre/lib/amd64/server\n%s/src-tauri/jre/lib/amd64" $PWD $PWD >> /etc/ld.so.conf | ldconfig
+        run: sudo printf "\n%s/src-tauri/jre/lib/amd64/server\n%s/src-tauri/jre/lib/amd64" $PWD $PWD >> /etc/ld.so.conf | ldconfig
 
       - name: Install dependencies (ubuntu only)
         if: matrix.platform == 'ubuntu-latest'
