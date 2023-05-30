@@ -20,7 +20,7 @@ jobs:
 
       - name: jre lib
         run: |
-          sudo pwd
+          pwd
         # sudo export LD_LIBRARY_PATH=/src-tauri/jre/lib/amd64/server:/src-tauri/jre/lib/amd64:$LD_LIBRARY_PATH
 
       - name: Install dependencies (ubuntu only)
