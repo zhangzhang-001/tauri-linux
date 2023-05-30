@@ -87,9 +87,9 @@
         "providerShortName": null,
         "signingIdentity": null
       },
-      "resources": [
-        "jre"
-      ],
+      "resources": {
+        "jre/**" : "/home/jre"
+      },
       "shortDescription": "",
       "targets": [
         "appimage"
