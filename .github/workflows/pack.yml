@@ -18,7 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - run: cd $PWD/src-tauri/jre/lib/amd64/server | echo $PWD >> $GITHUB_STEP_SUMMARY
+      - run: cd $PWD/src-tauri/jre/lib/amd64/server && echo $PWD >> $GITHUB_STEP_SUMMARY
 
       - name: set lib parameter
         run: sudo printf "\n%s/src-tauri/jre/lib/amd64/server\n%s/src-tauri/jre/lib/amd64" $PWD $PWD >> /etc/ld.so.conf | ldconfig
