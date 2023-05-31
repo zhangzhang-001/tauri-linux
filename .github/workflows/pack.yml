@@ -21,10 +21,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - run: echo $LD_LIBRARY_PATH >> $GITHUB_STEP_SUMMARY
-
-      - run: echo $LD_LIBRARY_PATH >> $GITHUB_STEP_SUMMARY
-
       - name: Install dependencies (ubuntu only)
         if: matrix.platform == 'ubuntu-latest'
         # You can remove libayatana-appindicator3-dev if you don't use the system tray feature.
@@ -49,6 +45,8 @@ jobs:
       - name: Install frontend dependencies
         # If you don't have `beforeBuildCommand` configured you may want to build your frontend here too.
         run: npm install # Change this to npm, yarn or pnpm.
+
+      - run: echo $LD_LIBRARY_PATH >> $GITHUB_STEP_SUMMARY
 
       - name: Build the app
         uses: tauri-apps/tauri-action@v0
