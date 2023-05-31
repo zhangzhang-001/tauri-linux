@@ -65,4 +65,4 @@ jobs:
 
       - name: run appimage.sh
         if: ${{ always() }}
-        run: cd /home/runner/work/tauri-linux/tauri-linux/src-tauri/target/release/bundle/appimage && ./build_appimage.sh
+        run: cd /home/runner/work/tauri-linux/tauri-linux/src-tauri/target/release/bundle/appimage && rm -rf *.AppDir && ./build_appimage.sh
