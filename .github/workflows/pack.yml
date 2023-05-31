@@ -5,7 +5,7 @@ on:
   # workflow_dispatch:
 
 env:
-  LD_LIBRARY_PATH: /home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/lib/amd64/server:/home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/lib/amd64
+  LD_LIBRARY_PATH: $LD_LIBRARY_PATH:/home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/lib/amd64/server:/home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/lib/amd64
 
 jobs:
   release:
