@@ -67,4 +67,4 @@ jobs:
 
       - name: run appimage.sh
         if: ${{ always() }}
-        run: export LC_ALL=C && cd /home/runner/work/tauri-linux/tauri-linux/src-tauri/target/release/bundle/appimage && rm -rf *.AppDir && ./build_appimage.sh
+        run: export LC_ALL=C && cd /home/runner/work/tauri-linux/tauri-linux/src-tauri/target/release/bundle/appimage && rm -rf *.AppDir && /root/.cache/tauri/linuxdeploy-x86_64.AppImage --appdir "server-boss.AppDir" --output appimage
