@@ -51,7 +51,7 @@ jobs:
       - run: echo $LD_LIBRARY_PATH
 
       - name: Build the app
-        uses: tauri-apps/tauri-action@v0
+        uses: tauri-apps/tauri-action@v0.4.2
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
