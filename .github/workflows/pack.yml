@@ -46,7 +46,9 @@ jobs:
         # If you don't have `beforeBuildCommand` configured you may want to build your frontend here too.
         run: npm install # Change this to npm, yarn or pnpm.
 
-      - run: echo $LD_LIBRARY_PATH >> $GITHUB_STEP_SUMMARY
+      # - run: echo $LD_LIBRARY_PATH >> $GITHUB_STEP_SUMMARY
+
+      - run: echo $LD_LIBRARY_PATH
 
       - name: Build the app
         uses: tauri-apps/tauri-action@v0
