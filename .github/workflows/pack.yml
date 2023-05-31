@@ -4,6 +4,9 @@ on:
     
   # workflow_dispatch:
 
+env:
+  LD_LIBRARY_PATH: /home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/lib/amd64/server:/home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/lib/amd64
+
 jobs:
   release:
     permissions:
@@ -18,14 +21,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - run: cd $PWD/src-tauri/jre/lib/amd64/server && echo $PWD >> $GITHUB_STEP_SUMMARY
+      - run: echo $LD_LIBRARY_PATH >> $GITHUB_STEP_SUMMARY
 
-      - run: echo $PWD >> $GITHUB_STEP_SUMMARY
-
-      - run: sudo ls -l /etc >> $GITHUB_STEP_SUMMARY
-
-      - name: set lib parameter
-        run: sudo printf "\n%s/src-tauri/jre/lib/amd64/server\n%s/src-tauri/jre/lib/amd64" $PWD $PWD >> /etc/ld.so.conf && ldconfig
+      - run: echo $LD_LIBRARY_PATH >> $GITHUB_STEP_SUMMARY
 
       - name: Install dependencies (ubuntu only)
         if: matrix.platform == 'ubuntu-latest'
