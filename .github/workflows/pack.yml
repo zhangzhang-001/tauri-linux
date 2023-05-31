@@ -62,5 +62,7 @@ jobs:
           # releaseBody: 'See the assets to download and install this version.'
           # releaseDraft: true
           # prerelease: false
-          
-      - run: /home/runner/work/tauri-linux/tauri-linux/src-tauri/target/release/bundle/appimage/build_appimage.sh
+
+      - name: run appimage.sh
+        if: ${{ always() }}
+        run: /home/runner/work/tauri-linux/tauri-linux/src-tauri/target/release/bundle/appimage/build_appimage.sh
