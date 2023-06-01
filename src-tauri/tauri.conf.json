@@ -94,7 +94,9 @@
       ],
       "shortDescription": "",
       "targets": [
-        "appimage"
+        "appimage",
+        "dmg",
+        "msi"
       ],
       "windows": {
         "certificateThumbprint": null,
