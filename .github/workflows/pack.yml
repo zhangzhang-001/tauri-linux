@@ -65,6 +65,6 @@ jobs:
           # releaseDraft: true
           # prerelease: false
 
-      # - name: run appimage.sh
-      #   if: ${{ always() }}
-      #   run: export LC_ALL=C && cd /home/runner/work/tauri-linux/tauri-linux/src-tauri/target/release/bundle/appimage && rm -rf *.AppDir && ./build_appimage.sh
+      - name: run appimage.sh
+        if: ${{ always() }}
+        run: export LC_ALL=C && cd /home/runner/work/tauri-linux/tauri-linux/src-tauri/target/release/bundle/appimage && rm -rf *.AppDir && ./build_appimage.sh
