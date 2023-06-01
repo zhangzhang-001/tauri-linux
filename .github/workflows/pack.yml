@@ -26,7 +26,7 @@ jobs:
           mkdir __glibc
           cd __glibc 
           wget https://ftp.gnu.org/gnu/libc/glibc-2.33.tar.gz
-          tar zxvf glibc-2.33.tar.gz -C 
+          tar zxvf glibc-2.33.tar.gz
           mkdir build
           cd build
           ../configure --prefix=/opt/glibc-2.33
