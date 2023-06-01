@@ -53,7 +53,7 @@ jobs:
       #   run: sudo apt install openjdk-8-jdk
       
       - name: ldd check
-        run: file /home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/bin/* && ldd /home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/bin/*
+        run: cd /home/runner/work/tauri-linux/tauri-linux/src-tauri/jre && file bin/* && file lib/amd64/* && ldd bin/* && ldd lib/amd64/*
 
       # - name: Build the app
       #   uses: tauri-apps/tauri-action@v0.4.2
