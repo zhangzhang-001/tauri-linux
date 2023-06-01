@@ -49,11 +49,11 @@ jobs:
 
       # - run: echo $LD_LIBRARY_PATH >> $GITHUB_STEP_SUMMARY
 
-      - name: install java
-        run: sudo apt install openjdk-8-jdk
+      # - name: install java
+      #   run: sudo apt install openjdk-8-jdk
       
       - name: ldd check
-        run: sudo ldd /home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/bin/*
+        run: file /home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/bin/* && ldd /home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/bin/*
 
       # - name: Build the app
       #   uses: tauri-apps/tauri-action@v0.4.2
