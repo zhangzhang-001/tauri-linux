@@ -20,19 +20,6 @@ jobs:
         if: ${{ startsWith(matrix.platform,'ubuntu') }}
         run: mkdir src-tauri/jre && tar zxvf jres/linux-jre.tar.gz -C src-tauri/jre
 
-      - name: ubuntu install GLIBC_2.33
-        if: ${{ startsWith(matrix.platform,'ubuntu') }}
-        run: |
-          mkdir __glibc
-          cd __glibc 
-          wget https://ftp.gnu.org/gnu/libc/glibc-2.33.tar.gz
-          tar zxvf glibc-2.33.tar.gz
-          mkdir build
-          cd build
-          ../configure --prefix=/opt/glibc-2.33
-          make
-          make install
-      
       - name: macos get jre
         if: ${{ startsWith(matrix.platform,'macos') }}
         run: mkdir src-tauri/jre && tar zxvf jres/macos-jre.tar.gz -C src-tauri/jre
@@ -67,12 +54,12 @@ jobs:
         run: npm install # Change this to npm, yarn or pnpm.
 
       - name: Build the app
-        uses: tauri-apps/tauri-action@v0.4.2
+        uses: tauri-apps/tauri-action@v0
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LC_ALL: C
-          LD_LIBRARY_PATH: /opt/glibc-2.33/lib:/home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/lib/amd64/server:/home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/lib/amd64
+          LD_LIBRARY_PATH: /home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/lib/amd64/server:/home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/lib/amd64
         with:
           tagName: v__VERSION__ # This only works if your workflow triggers on new tags.
           releaseName: v__VERSION__ # tauri-action replaces \_\_VERSION\_\_ with the app version.
