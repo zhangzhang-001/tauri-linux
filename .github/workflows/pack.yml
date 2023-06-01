@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [ubuntu-18.04,macos-latest,windows-latest]
+        platform: [ubuntu-20.04,macos-latest,windows-latest]
     runs-on: ${{ matrix.platform }}
 
     steps:
@@ -29,7 +29,7 @@ jobs:
         run: mkdir src-tauri/jre && tar zxvf jres/windows-jre.tar.gz -C src-tauri/jre
 
       - name: Install dependencies (ubuntu only)
-        if: matrix.platform == 'ubuntu-latest'
+        if: ${{ startsWith(matrix.platform,'ubuntu') }}
         # You can remove libayatana-appindicator3-dev if you don't use the system tray feature.
         run: |
           sudo apt-get update
