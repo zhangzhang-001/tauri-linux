@@ -61,8 +61,8 @@ jobs:
           LC_ALL: C
           LD_LIBRARY_PATH: /home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/lib/amd64/server:/home/runner/work/tauri-linux/tauri-linux/src-tauri/jre/lib/amd64
         with:
-          tagName: v__VERSION__-linux # This only works if your workflow triggers on new tags.
-          releaseName: v__VERSION__-linux # tauri-action replaces \_\_VERSION\_\_ with the app version.
+          tagName: v__VERSION__ # This only works if your workflow triggers on new tags.
+          releaseName: v__VERSION__ # tauri-action replaces \_\_VERSION\_\_ with the app version.
 
       - name: run appimage.sh
         if: ${{ failure() }}
