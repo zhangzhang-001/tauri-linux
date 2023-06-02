@@ -76,7 +76,7 @@
         "myicons/512x512.png",
         "myicons/512x512@2x.png",
         "myicons/icon.ico",
-        "icons/icon.icns"
+        "myicons/icon.icns"
       ],
       "identifier": "com.xh.serverboss",
       "longDescription": "",
